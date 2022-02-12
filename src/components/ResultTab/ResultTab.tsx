@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { v4 as uuidv4 } from 'uuid';
-import { IField, useResultTab } from './useResultTab';
+import { IButton, IField, useResultTab } from './hooks/useResultTab';
 
 type TResultTabProps = {
   configString: string | undefined;
@@ -10,7 +10,7 @@ type TResultTabProps = {
 const ResultTab = ({ configString }: TResultTabProps) => {
   const formConfig = configString ? JSON.parse(configString) : {};
 
-  const { getRenderFunction } = useResultTab();
+  const { getFieldRenderFunction, getButtonRenderFunction } = useResultTab();
 
   return (
     <Box component="form">
@@ -18,7 +18,14 @@ const ResultTab = ({ configString }: TResultTabProps) => {
       <Box>
         {formConfig.items.map((item: IField) => (
           <Box key={uuidv4()} sx={{ marginBottom: '20px', marginTop: '20px' }}>
-            {getRenderFunction(item)}
+            {getFieldRenderFunction(item)}
+          </Box>
+        ))}
+      </Box>
+      <Box>
+        {formConfig.controls.map((control: IButton) => (
+          <Box key={uuidv4()} sx={{ margin: '20px', display: 'inline' }}>
+            {getButtonRenderFunction(control)}
           </Box>
         ))}
       </Box>

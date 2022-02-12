@@ -6,6 +6,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import Radio from '@mui/material/Radio';
 import Typography from '@mui/material/Typography';
 import { v4 as uuidv4 } from 'uuid';
+import Button from '@mui/material/Button';
 
 enum FieldTypes {
   NUMBER = 'number',
@@ -26,6 +27,11 @@ export interface IField {
   name?: string;
   placeholder?: string;
   radioOptions?: Array<string>;
+}
+
+export interface IButton {
+  type: 'button' | 'submit' | 'reset' | undefined;
+  label: string;
 }
 
 export const useResultTab = () => {
@@ -94,7 +100,7 @@ export const useResultTab = () => {
     [FieldTypes.RADIO]: renderRadioGroup,
   };
 
-  const getRenderFunction = (field: IField) => {
+  const getFieldRenderFunction = (field: IField) => {
     const fieldType = field.type;
     const renderFunction = FIELD_RENDER_FUNC[fieldType];
     if (!renderFunction || typeof renderFunction !== 'function') {
@@ -103,5 +109,13 @@ export const useResultTab = () => {
     return renderFunction(field);
   };
 
-  return { getRenderFunction };
+  const getButtonRenderFunction = (control: IButton) => {
+    return (
+      <Button key={uuidv4()} type={control.type} variant="outlined">
+        {control.label}
+      </Button>
+    );
+  };
+
+  return { getFieldRenderFunction, getButtonRenderFunction };
 };
