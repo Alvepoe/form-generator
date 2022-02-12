@@ -2,13 +2,13 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box'
 import {ReactNode} from "react";
 
-type TabPanelProps = {
+type TTabPanelProps = {
     children?: ReactNode;
     tabName: string;
     currentTabName: string;
 }
 
-export function TabPanel(props: TabPanelProps) {
+export function TabPanel(props: TTabPanelProps) {
     const { children, currentTabName, tabName, ...other } = props;
 
     return (
@@ -21,7 +21,7 @@ export function TabPanel(props: TabPanelProps) {
         >
             {currentTabName === tabName && (
                 <Box sx={{ p: 3 }}>
-                    <Typography>{children}</Typography>
+                    {children}
                 </Box>
             )}
         </div>
