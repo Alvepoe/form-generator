@@ -1,0 +1,59 @@
+{
+  "title":"Form",
+  "items":[
+    {
+      "label":"Text Input",
+      "type":"text",
+      "name":"textinput1"
+    },
+    {
+      "label":"Disabled Input",
+      "type":"text",
+      "name":"textinput2",
+      "disabled": true
+    },
+    {
+      "label":"Required Input",
+      "type":"text",
+      "name":"textinput3",
+      "required": true
+    },
+    {
+      "label":"Number Input",
+      "type":"number",
+      "name":"numberinput1"
+    },
+    {
+      "label":"Text area",
+      "type":"textarea",
+      "name":"textarea1"
+    },
+    {
+      "type":"date",
+      "name":"date"
+    },
+    {
+      "type":"checkbox",
+      "label":"checkbox"
+    },
+    {
+      "type":"checkbox",
+      "name":"disabled checkbox",
+      "disabled": true
+    },
+    {
+      "label":"Radio",
+      "type":"radio",
+      "name":"radio1",
+      "value":"1",
+      "radioOptions":["first", "second"]
+    },
+    {
+      "label":"Radio",
+      "type":"radio",
+      "name":"radio1",
+      "value":"1",
+      "radioOptions":[]
+    }
+  ]
+}

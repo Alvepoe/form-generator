@@ -1,4 +1,4 @@
-import {FormEvent, useState} from "react";
+import { useState } from "react";
 
 export const useJsonScheme = () => {
     const [configString, setConfigString] = useState<string>();
