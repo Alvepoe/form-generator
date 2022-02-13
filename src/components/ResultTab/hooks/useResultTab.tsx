@@ -85,7 +85,9 @@ export const useResultTab = () => {
               })}
             </RadioGroup>
           ) : (
-            <Typography sx={{margin: '20px'}}>Radio group options weren't found</Typography>
+            <Typography sx={{ margin: '20px' }}>
+              Radio group options weren't found
+            </Typography>
           )
         }
       />
