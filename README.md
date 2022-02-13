@@ -73,5 +73,5 @@ App can generate form from json scheme in the certain format. It supports differ
 }
 
 ```
-The following technologies were used in the project: Typescript, React, material-ui, eslint and prettier. You can try the app from the link - https://epic-shockley-5bcd97.netlify.app/.
+The following technologies were used in the project: Typescript, React, material-ui, eslint and prettier. You can test the app from the link - https://epic-shockley-5bcd97.netlify.app/.
 
