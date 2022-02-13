@@ -5,10 +5,16 @@ const useJsonScheme = () => {
 
   const extractConfig = (form: HTMLFormElement): void => {
     const formEntries = new FormData(form).entries();
-    let serializedForm = { config: '' };
-    Array.from(formEntries).forEach(([name, value]) => {
-      serializedForm = { ...serializedForm, [name]: value };
-    });
+    const formEntriesArray = Array.from(formEntries);
+    const serializedForm = formEntriesArray.reduce(
+      (acc, [name, value]) => {
+        return {
+          ...acc,
+          [name]: value,
+        };
+      },
+      { config: '' }
+    );
     setConfigString(serializedForm.config);
   };
 

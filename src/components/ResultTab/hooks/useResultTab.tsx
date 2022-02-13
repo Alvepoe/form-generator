@@ -48,6 +48,7 @@ export const useResultTab = () => {
           disabled={field.disabled}
           required={field.required}
           defaultValue={field.value}
+          autoComplete="off"
         />
       </FormControl>
     );
@@ -70,7 +71,7 @@ export const useResultTab = () => {
         labelPlacement="start"
         control={
           field.radioOptions?.length ? (
-            <RadioGroup row>
+            <RadioGroup name={field.name} row>
               {field.radioOptions.map(item => {
                 return (
                   <FormControlLabel
@@ -78,7 +79,7 @@ export const useResultTab = () => {
                     key={uuidv4()}
                     value={item}
                     labelPlacement="top"
-                    control={<Radio color="primary" />}
+                    control={<Radio />}
                   />
                 );
               })}

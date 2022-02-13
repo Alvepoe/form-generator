@@ -16,6 +16,7 @@
     }
   },
   "rules": {
+    "no-debugger": "warn",
     "import/extensions": [
       "error",
       "ignorePackages",

@@ -8,24 +8,24 @@ App can generate form from json scheme in the certain format. It supports differ
     {
       "label":"Text Input",
       "type":"text",
-      "name":"textinput1"
+      "name":"text_input1"
     },
     {
       "label":"Disabled Input",
       "type":"text",
-      "name":"textinput2",
+      "name":"text_input2",
       "disabled": true
     },
     {
       "label":"Required Input",
       "type":"text",
-      "name":"textinput3",
+      "name":"text_input3",
       "required": true
     },
     {
       "label":"Number Input",
       "type":"number",
-      "name":"numberinput1"
+      "name":"number_input1"
     },
     {
       "label":"Text area",
@@ -55,7 +55,7 @@ App can generate form from json scheme in the certain format. It supports differ
     {
       "label":"Radio",
       "type":"radio",
-      "name":"radio1",
+      "name":"radio2",
       "value":"1",
       "radioOptions":[]
     }
