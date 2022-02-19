@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const useJsonScheme = () => {
-  const [configString, setConfigString] = useState<string>();
+  const [configString, setConfigString] = useState<string>('');
 
   const extractConfig = (form: HTMLFormElement): void => {
     const formEntries = new FormData(form).entries();
